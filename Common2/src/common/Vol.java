@@ -28,14 +28,7 @@ public class Vol {
 			if (n==1) {
 				VolInput();
 			}else if (n==2) {
-				System.out.println("현재 볼륨은 "+v.getVol()+"입니다.");
-				System.out.print("1. +버튼\n2. -버튼\n선택 >> ");
-				int choice = sc.nextInt();
-				switch (choice) {
-				case 1: VolUp(); break;
-				case 2: VolDown(); break;
-				default : System.out.println("잘못된 입력입니다.");
-				}
+				VolUpDonw();
 			}else if (n==3) {
 				VolZero();
 			}else if (n==4) {
@@ -43,6 +36,16 @@ public class Vol {
 			}else {
 				System.out.println("잘못된 입력입니다.");
 			}
+		}
+	}
+	public void VolUpDonw() {
+		System.out.println("현재 볼륨은 "+v.getVol()+"입니다.");
+		System.out.print("1. +버튼\n2. -버튼\n선택 >> ");
+		int choice = sc.nextInt();
+		switch (choice) {
+		case 1: VolUp(); break;
+		case 2: VolDown(); break;
+		default : System.out.println("잘못된 입력입니다.");
 		}
 	}
 	public void VolInput() {
